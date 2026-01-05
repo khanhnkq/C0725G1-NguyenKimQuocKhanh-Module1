@@ -1,29 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-const nokia = {
-  name:"Nokia",
-  price:100,
-  amount:10
-} 
-const iphone = {
-  name:"Iphone",
-  price:200,
-  amount:10
-} 
-const samsung = {
-  name:"Samsung",
-  price:100,
-  amount:10
-} 
 
-const products = [nokia,iphone,samsung]
+
+const products = [
+  {name:"Nokia",price:100},
+  {name:"Iphone",price:200},
+  {name:"Samsung",price:300}
+]
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(<table>
   <tr>
     <th>STT</th>
-    <th>Product name</th>
-    <th>Price</th>
+    <th>Tên sản phẩm</th>
+    <th>Giá</th>
   </tr>
   {products.map((p,i)=>(
 <tr>
