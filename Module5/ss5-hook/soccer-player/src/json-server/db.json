@@ -1,0 +1,99 @@
+{
+  "players": [
+    {
+      "id": "4",
+      "code": "PL-004",
+      "name": "Kevin De Bruyne",
+      "birthDate": "1991-06-28",
+      "transferValue": 90000000,
+      "position": "CM",
+      "club": {
+        "id": 1,
+        "name": "MU"
+      }
+    },
+    {
+      "id": "5",
+      "code": "PL-005",
+      "name": "Virgil van Dijk",
+      "birthDate": "1991-07-08",
+      "transferValue": 60000000,
+      "position": "CB",
+      "club": {
+        "id": 1,
+        "name": "MU"
+      }
+    },
+    {
+      "id": "6",
+      "code": "PL-006",
+      "name": "Mbappe",
+      "birthDate": "1998-12-20",
+      "transferValue": 180000000,
+      "position": "ST",
+      "club": {
+        "id": 3,
+        "name": "PSG"
+      }
+    },
+    {
+      "id": "7",
+      "code": "PL-007",
+      "name": "Bellingham",
+      "birthDate": "2003-06-29",
+      "transferValue": 120000000,
+      "position": "CM",
+      "club": {
+        "id": 2,
+        "name": "REAL"
+      }
+    },
+    {
+      "id": "8",
+      "code": "PL-008",
+      "name": "Free Agent",
+      "birthDate": "2000-01-01",
+      "transferValue": 0,
+      "position": "FW",
+      "club": null
+    },
+    {
+      "id": "3e33",
+      "code": "PL-004",
+      "club": {
+        "id": "1",
+        "name": "MU"
+      },
+      "name": "khanhdeptrai",
+      "birthDate": "0123-03-12",
+      "transferValue": 1,
+      "position": "Hoc sinh"
+    },
+    {
+      "id": "1580",
+      "code": "GD-0001",
+      "club": {
+        "id": "1",
+        "name": "MU"
+      },
+      "name": "claudecode",
+      "birthDate": "0213-03-12",
+      "transferValue": 123,
+      "position": "123"
+    }
+  ],
+  "clubs": [
+    {
+      "id": "1",
+      "name": "MU"
+    },
+    {
+      "id": "2",
+      "name": "REAL"
+    },
+    {
+      "id": "3",
+      "name": "PSG"
+    }
+  ]
+}
