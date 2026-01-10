@@ -8,9 +8,12 @@ import {DeleteModalComponent} from "./DeleteModalComponent.jsx";
 import {Link} from "react-router-dom";
 import toast from "react-hot-toast";
 import {Layout, Pagination} from 'antd';
+import {useSelector} from "react-redux";
 
 
 export const TableComponent = () => {
+    const username = useSelector(state => state.username)
+    const isAuthenticated = useSelector(state => state.isAuthenticated);
     const [soccerPlayer, setSoccerPlayer] = useState([]);
     const [pageInfo, setPageInfo] = useState({
         "first": 0,
@@ -35,6 +38,7 @@ export const TableComponent = () => {
     const handleShowOff = () => {
         setIsShowing(false);
     }
+
 
     const loadData = async (page = 1) => {
         const res = await findAll(page);
