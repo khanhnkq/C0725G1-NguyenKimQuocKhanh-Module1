@@ -1,0 +1,670 @@
+{
+  "services": [
+    {
+      "id": "2",
+      "type": "HOUSE",
+      "image": "src/assets/logo/logo.jpeg",
+      "serviceName": "Family House Garden",
+      "usableArea": 200,
+      "rentalCost": 6000000,
+      "maxPeople": 6,
+      "rentType": "day",
+      "roomStandard": "Standard",
+      "otherAmenities": "Garden view, kitchen",
+      "floors": 2,
+      "extraServiceIds": [
+        3,
+        4
+      ],
+      "extraServices": [
+        {}
+      ]
+    },
+    {
+      "id": "3",
+      "type": "ROOM",
+      "image": "src/assets/logo/logo.jpeg",
+      "serviceName": "Standard Room",
+      "usableArea": 45,
+      "rentalCost": 1500000,
+      "maxPeople": 2,
+      "rentType": "day",
+      "freeService": "Free breakfast",
+      "extraServiceIds": [
+        4
+      ],
+      "extraServices": [
+        {}
+      ]
+    },
+    {
+      "id": "4",
+      "type": "VILLA",
+      "image": "src/assets/logo/logo.jpeg",
+      "serviceName": "Premium Villa Garden View",
+      "usableArea": 300,
+      "rentalCost": 10000000,
+      "maxPeople": 6,
+      "rentType": "day",
+      "roomStandard": "VIP",
+      "otherAmenities": "Private garden, BBQ",
+      "poolArea": 40,
+      "floors": 2,
+      "extraServiceIds": [
+        1,
+        5
+      ],
+      "extraServices": [
+        {}
+      ]
+    },
+    {
+      "id": "5",
+      "type": "HOUSE",
+      "image": "src/assets/logo/logo.jpeg",
+      "serviceName": "Modern House City View",
+      "usableArea": 180,
+      "rentalCost": 5500000,
+      "maxPeople": 5,
+      "rentType": "day",
+      "roomStandard": "Standard",
+      "otherAmenities": "City view, balcony",
+      "floors": 2,
+      "extraServiceIds": [
+        3
+      ],
+      "extraServices": [
+        {}
+      ]
+    },
+    {
+      "id": "6",
+      "type": "ROOM",
+      "image": "src/assets/logo/logo.jpeg",
+      "serviceName": "Deluxe Room Sea View",
+      "usableArea": 50,
+      "rentalCost": 1800000,
+      "maxPeople": 2,
+      "rentType": "day",
+      "freeService": "Free breakfast",
+      "extraServiceIds": [
+        4
+      ],
+      "extraServices": [
+        {}
+      ]
+    },
+    {
+      "id": "7",
+      "type": "VILLA",
+      "image": "src/assets/logo/logo.jpeg",
+      "serviceName": "Royal Villa Pool View",
+      "usableArea": 400,
+      "rentalCost": 15000000,
+      "maxPeople": 10,
+      "rentType": "day",
+      "roomStandard": "VIP",
+      "otherAmenities": "Private pool, bar",
+      "poolArea": 60,
+      "floors": 3,
+      "extraServiceIds": [
+        1,
+        2,
+        5
+      ],
+      "extraServices": [
+        {}
+      ]
+    },
+    {
+      "id": "8",
+      "type": "HOUSE",
+      "image": "src/assets/logo/logo.jpeg",
+      "serviceName": "Eco House Garden",
+      "usableArea": 160,
+      "rentalCost": 4800000,
+      "maxPeople": 4,
+      "rentType": "day",
+      "roomStandard": "Standard",
+      "otherAmenities": "Green space",
+      "floors": 1,
+      "extraServiceIds": [
+        3,
+        4
+      ],
+      "extraServices": [
+        {}
+      ]
+    },
+    {
+      "id": "9",
+      "type": "ROOM",
+      "image": "src/assets/logo/logo.jpeg",
+      "serviceName": "Superior Room",
+      "usableArea": 40,
+      "rentalCost": 1300000,
+      "maxPeople": 2,
+      "rentType": "day",
+      "freeService": "Free water",
+      "extraServiceIds": [
+        4
+      ],
+      "extraServices": [
+        {}
+      ]
+    },
+    {
+      "id": "10",
+      "type": "VILLA",
+      "image": "src/assets/logo/logo.jpeg",
+      "serviceName": "Sunset Villa",
+      "usableArea": 320,
+      "rentalCost": 11000000,
+      "maxPeople": 7,
+      "rentType": "day",
+      "roomStandard": "VIP",
+      "otherAmenities": "Sunset view",
+      "poolArea": 45,
+      "floors": 2,
+      "extraServiceIds": [
+        1,
+        3
+      ],
+      "extraServices": [
+        {}
+      ]
+    },
+    {
+      "id": "11",
+      "type": "HOUSE",
+      "image": "src/assets/logo/logo.jpeg",
+      "serviceName": "Family House Standard",
+      "usableArea": 190,
+      "rentalCost": 5200000,
+      "maxPeople": 6,
+      "rentType": "day",
+      "roomStandard": "Standard",
+      "otherAmenities": "Kitchen, parking",
+      "floors": 2,
+      "extraServiceIds": [
+        3
+      ],
+      "extraServices": [
+        {}
+      ]
+    },
+    {
+      "id": "12",
+      "type": "ROOM",
+      "image": "src/assets/logo/logo.jpeg",
+      "serviceName": "Budget Room",
+      "usableArea": 30,
+      "rentalCost": 900000,
+      "maxPeople": 2,
+      "rentType": "day",
+      "freeService": "Free wifi",
+      "extraServiceIds": [
+        4
+      ],
+      "extraServices": [
+        {}
+      ]
+    },
+    {
+      "id": "13",
+      "type": "VILLA",
+      "image": "src/assets/logo/logo.jpeg",
+      "serviceName": "Luxury Forest Villa",
+      "usableArea": 360,
+      "rentalCost": 12500000,
+      "maxPeople": 8,
+      "rentType": "day",
+      "roomStandard": "VIP",
+      "otherAmenities": "Forest view",
+      "poolArea": 55,
+      "floors": 2,
+      "extraServiceIds": [
+        1,
+        5
+      ],
+      "extraServices": [
+        {}
+      ]
+    },
+    {
+      "id": "14",
+      "type": "HOUSE",
+      "image": "src/assets/logo/logo.jpeg",
+      "serviceName": "Cozy House",
+      "usableArea": 150,
+      "rentalCost": 4200000,
+      "maxPeople": 4,
+      "rentType": "day",
+      "roomStandard": "Standard",
+      "otherAmenities": "Cozy interior",
+      "floors": 1,
+      "extraServiceIds": [
+        3,
+        4
+      ],
+      "extraServices": [
+        {}
+      ]
+    },
+    {
+      "id": "15",
+      "type": "ROOM",
+      "image": "src/assets/logo/logo.jpeg",
+      "serviceName": "Business Room",
+      "usableArea": 48,
+      "rentalCost": 1600000,
+      "maxPeople": 2,
+      "rentType": "day",
+      "freeService": "Free coffee",
+      "extraServiceIds": [
+        4
+      ],
+      "extraServices": [
+        {}
+      ]
+    },
+    {
+      "id": "16",
+      "type": "VILLA",
+      "image": "src/assets/logo/logo.jpeg",
+      "serviceName": "Diamond Villa",
+      "usableArea": 420,
+      "rentalCost": 18000000,
+      "maxPeople": 12,
+      "rentType": "day",
+      "roomStandard": "VIP",
+      "otherAmenities": "Luxury interior",
+      "poolArea": 70,
+      "floors": 3,
+      "extraServiceIds": [
+        1,
+        2,
+        5
+      ],
+      "extraServices": [
+        {}
+      ]
+    },
+    {
+      "id": "17",
+      "type": "HOUSE",
+      "image": "src/assets/logo/logo.jpeg",
+      "serviceName": "Town House",
+      "usableArea": 170,
+      "rentalCost": 5000000,
+      "maxPeople": 5,
+      "rentType": "day",
+      "roomStandard": "Standard",
+      "otherAmenities": "Near center",
+      "floors": 2,
+      "extraServiceIds": [
+        3
+      ],
+      "extraServices": [
+        {}
+      ]
+    },
+    {
+      "id": "18",
+      "type": "ROOM",
+      "image": "src/assets/logo/logo.jpeg",
+      "serviceName": "Sea Breeze Room",
+      "usableArea": 55,
+      "rentalCost": 1900000,
+      "maxPeople": 3,
+      "rentType": "day",
+      "freeService": "Free breakfast",
+      "extraServiceIds": [
+        4
+      ],
+      "extraServices": [
+        {}
+      ]
+    },
+    {
+      "id": "19",
+      "type": "VILLA",
+      "image": "src/assets/logo/logo.jpeg",
+      "serviceName": "Ocean Pearl Villa",
+      "usableArea": 380,
+      "rentalCost": 14000000,
+      "maxPeople": 9,
+      "rentType": "day",
+      "roomStandard": "VIP",
+      "otherAmenities": "Oceanfront",
+      "poolArea": 65,
+      "floors": 2,
+      "extraServiceIds": [
+        1,
+        5
+      ],
+      "extraServices": [
+        {}
+      ]
+    },
+    {
+      "id": "20",
+      "type": "HOUSE",
+      "image": "src/assets/logo/logo.jpeg",
+      "serviceName": "Classic House",
+      "usableArea": 185,
+      "rentalCost": 5300000,
+      "maxPeople": 6,
+      "rentType": "day",
+      "roomStandard": "Standard",
+      "otherAmenities": "Classic style",
+      "floors": 2,
+      "extraServiceIds": [
+        3,
+        4
+      ],
+      "extraServices": [
+        {}
+      ]
+    },
+    {
+      "id": "21",
+      "type": "ROOM",
+      "image": "src/assets/logo/logo.jpeg",
+      "serviceName": "Mini Room",
+      "usableArea": 28,
+      "rentalCost": 800000,
+      "maxPeople": 1,
+      "rentType": "day",
+      "freeService": "Free water",
+      "extraServiceIds": [
+        4
+      ],
+      "extraServices": [
+        {}
+      ]
+    },
+    {
+      "id": "22",
+      "type": "VILLA",
+      "image": "src/assets/logo/logo.jpeg",
+      "serviceName": "Skyline Villa",
+      "usableArea": 340,
+      "rentalCost": 11500000,
+      "maxPeople": 7,
+      "rentType": "day",
+      "roomStandard": "VIP",
+      "otherAmenities": "Skyline view",
+      "poolArea": 48,
+      "floors": 2,
+      "extraServiceIds": [
+        1,
+        3
+      ],
+      "extraServices": [
+        {}
+      ]
+    },
+    {
+      "id": "23",
+      "type": "HOUSE",
+      "image": "src/assets/logo/logo.jpeg",
+      "serviceName": "Simple House",
+      "usableArea": 140,
+      "rentalCost": 4000000,
+      "maxPeople": 4,
+      "rentType": "day",
+      "roomStandard": "Standard",
+      "otherAmenities": "Basic amenities",
+      "floors": 1,
+      "extraServiceIds": [
+        3
+      ],
+      "extraServices": [
+        {}
+      ]
+    },
+    {
+      "id": "1f5f",
+      "type": "VILLA",
+      "serviceName": "Add",
+      "usableArea": 2000,
+      "rentalCost": 998,
+      "maxPeople": 8,
+      "rentType": "day",
+      "roomStandard": "Normal",
+      "otherAmenities": "Ocean view, private garden, BBQ area",
+      "poolArea": 200,
+      "floors": 8,
+      "extraServiceIds": [
+        5,
+        4
+      ],
+      "image": "src/assets/logo/logo.jpeg",
+      "extraServices": [
+        {
+          "id": "4",
+          "serviceName": "Drink",
+          "unit": "Bottle",
+          "price": 50000
+        },
+        {
+          "id": "5",
+          "serviceName": "Car Rental",
+          "unit": "Day",
+          "price": 800000
+        }
+      ]
+    }
+  ],
+  "extraServices": [
+    {
+      "id": "1",
+      "serviceName": "Massage",
+      "unit": "Hour",
+      "price": 500000
+    },
+    {
+      "id": "2",
+      "serviceName": "Karaoke",
+      "unit": "Hour",
+      "price": 300000
+    },
+    {
+      "id": "3",
+      "serviceName": "Food",
+      "unit": "Dish",
+      "price": 200000
+    },
+    {
+      "id": "4",
+      "serviceName": "Drink",
+      "unit": "Bottle",
+      "price": 50000
+    },
+    {
+      "id": "5",
+      "serviceName": "Car Rental",
+      "unit": "Day",
+      "price": 800000
+    }
+  ],
+  "customers": [
+    {
+      "id": "1",
+      "customerCode": "KH-001",
+      "customerName": "Nguyễn Văn An",
+      "dateOfBirth": "1990-05-15",
+      "gender": "Nam",
+      "idCard": "123456789",
+      "phoneNumber": "0901234567",
+      "email": "nguyenvanan@gmail.com",
+      "customerType": "Diamond",
+      "address": "123 Lê Lợi, Đà Nẵng"
+    },
+    {
+      "id": "2",
+      "customerCode": "KH-002",
+      "customerName": "Trần Thị Bình",
+      "dateOfBirth": "1985-08-20",
+      "gender": "Nữ",
+      "idCard": "987654321",
+      "phoneNumber": "0912345678",
+      "email": "tranthibinh@gmail.com",
+      "customerType": "Platinum",
+      "address": "456 Trần Phú, Đà Nẵng"
+    },
+    {
+      "id": "3",
+      "customerCode": "KH-003",
+      "customerName": "Lê Minh Cường",
+      "dateOfBirth": "1992-03-10",
+      "gender": "Nam",
+      "idCard": "456789123",
+      "phoneNumber": "0923456789",
+      "email": "leminhcuong@gmail.com",
+      "customerType": "Gold",
+      "address": "789 Nguyễn Văn Linh, Đà Nẵng"
+    },
+    {
+      "id": "4",
+      "customerCode": "KH-004",
+      "customerName": "Phạm Thị Dung",
+      "dateOfBirth": "1988-12-05",
+      "gender": "Nữ",
+      "idCard": "789123456",
+      "phoneNumber": "0934567890",
+      "email": "phamthidung@gmail.com",
+      "customerType": "Silver",
+      "address": "321 Hùng Vương, Đà Nẵng"
+    },
+    {
+      "id": "5",
+      "customerCode": "KH-005",
+      "customerName": "Hoàng Văn Em",
+      "dateOfBirth": "1995-07-25",
+      "gender": "Nam",
+      "idCard": "321654987",
+      "phoneNumber": "0945678901",
+      "email": "hoangvanem@gmail.com",
+      "customerType": "Member",
+      "address": "654 Lý Thường Kiệt, Đà Nẵng"
+    },
+    {
+      "id": "6",
+      "customerCode": "KH-006",
+      "customerName": "Võ Thị Phượng",
+      "dateOfBirth": "1993-11-18",
+      "gender": "Nữ",
+      "idCard": "147258369",
+      "phoneNumber": "0956789012",
+      "email": "vothiphuong@gmail.com",
+      "customerType": "Diamond",
+      "address": "987 Phan Châu Trinh, Đà Nẵng"
+    },
+    {
+      "id": "7",
+      "customerCode": "KH-007",
+      "customerName": "Đỗ Văn Giang",
+      "dateOfBirth": "1987-02-28",
+      "gender": "Nam",
+      "idCard": "258369147",
+      "phoneNumber": "0967890123",
+      "email": "dovangiang@gmail.com",
+      "customerType": "Platinum",
+      "address": "159 Hải Phòng, Đà Nẵng"
+    },
+    {
+      "id": "8",
+      "customerCode": "KH-008",
+      "customerName": "Bùi Thị Hoa",
+      "dateOfBirth": "1991-09-14",
+      "gender": "Nữ",
+      "idCard": "369147258",
+      "phoneNumber": "0978901234",
+      "email": "buithihoa@gmail.com",
+      "customerType": "Gold",
+      "address": "753 Võ Văn Kiệt, Đà Nẵng"
+    }
+  ],
+  "contracts": [
+    {
+      "id": "1",
+      "contractCode": "HD-001",
+      "customerId": "1",
+      "customerName": "Nguyễn Văn An",
+      "serviceId": "1",
+      "serviceName": "Luxury Beach Villa",
+      "startDate": "2024-01-15",
+      "endDate": "2024-01-20",
+      "deposit": 5000000,
+      "totalAmount": 25000000,
+      "status": "Đã thanh toán"
+    },
+    {
+      "id": "2",
+      "contractCode": "HD-002",
+      "customerId": "2",
+      "customerName": "Trần Thị Bình",
+      "serviceId": "2",
+      "serviceName": "Family House Garden",
+      "startDate": "2024-01-18",
+      "endDate": "2024-01-22",
+      "deposit": 3000000,
+      "totalAmount": 18000000,
+      "status": "Đang thực hiện"
+    },
+    {
+      "id": "3",
+      "contractCode": "HD-003",
+      "customerId": "3",
+      "customerName": "Lê Minh Cường",
+      "serviceId": "3",
+      "serviceName": "Standard Room",
+      "startDate": "2024-01-20",
+      "endDate": "2024-01-23",
+      "deposit": 1000000,
+      "totalAmount": 4500000,
+      "status": "Đã thanh toán"
+    },
+    {
+      "id": "4",
+      "contractCode": "HD-004",
+      "customerId": "4",
+      "customerName": "Phạm Thị Dung",
+      "serviceId": "4",
+      "serviceName": "Premium Villa Garden View",
+      "startDate": "2024-02-01",
+      "endDate": "2024-02-05",
+      "deposit": 4000000,
+      "totalAmount": 40000000,
+      "status": "Chờ xác nhận"
+    },
+    {
+      "id": "5",
+      "contractCode": "HD-005",
+      "customerId": "5",
+      "customerName": "Hoàng Văn Em",
+      "serviceId": "3",
+      "serviceName": "Standard Room",
+      "startDate": "2024-02-10",
+      "endDate": "2024-02-12",
+      "deposit": 500000,
+      "totalAmount": 3000000,
+      "status": "Đang thực hiện"
+    },
+    {
+      "id": "6",
+      "contractCode": "HD-006",
+      "customerId": "6",
+      "customerName": "Võ Thị Phượng",
+      "serviceId": "1",
+      "serviceName": "Luxury Beach Villa",
+      "startDate": "2024-02-15",
+      "endDate": "2024-02-20",
+      "deposit": 5000000,
+      "totalAmount": 25000000,
+      "status": "Đã thanh toán"
+    }
+  ]
+}
