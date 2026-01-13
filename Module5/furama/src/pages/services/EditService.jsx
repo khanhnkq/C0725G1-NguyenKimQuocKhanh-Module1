@@ -193,6 +193,9 @@ export function EditService() {
                                 </div>
 
                                 <div className="card-footer text-end">
+                                    <Button onClick={()=>navigate("/services")} type="submit" className="btn btn-secondary">
+                                        Hủy
+                                    </Button>
                                     <Button type="submit" className="btn btn-success">
                                         Save
                                     </Button>

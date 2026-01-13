@@ -1,7 +1,7 @@
-import {Modal, Button} from 'react-bootstrap';
+import { Modal, Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
-export default function DeleteCustomerModal({show, onHide, customer, onConfirm}) {
+export default function DeleteCustomerModal({ show, onHide, customer, onConfirm }) {
     return (
         <Modal show={show} onHide={onHide} centered>
             <Modal.Header closeButton className="bg-danger text-white">
@@ -14,10 +14,10 @@ export default function DeleteCustomerModal({show, onHide, customer, onConfirm})
                             Bạn có chắc chắn muốn xóa khách hàng sau không?
                         </p>
                         <div className="alert alert-warning">
-                            <strong>Mã khách hàng:</strong> {customer.customerCode}<br/>
-                            <strong>Tên khách hàng:</strong> {customer.customerName}<br/>
-                            <strong>Email:</strong> {customer.email}<br/>
-                            <strong>Số điện thoại:</strong> {customer.phoneNumber}
+                            <strong>Mã khách hàng:</strong> {customer.code}<br />
+                            <strong>Tên khách hàng:</strong> {customer.name}<br />
+                            <strong>Email:</strong> {customer.email}<br />
+                            <strong>Số điện thoại:</strong> {customer.phone}
                         </div>
                         <p className="text-danger mb-0">
                             <small>⚠️ Hành động này không thể hoàn tác!</small>

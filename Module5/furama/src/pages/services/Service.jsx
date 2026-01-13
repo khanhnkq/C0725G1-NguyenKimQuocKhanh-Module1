@@ -1,41 +1,40 @@
-import {useEffect, useState} from "react";
-import {Container, Row, Col, Pagination, InputGroup, Form} from "react-bootstrap";
+import { useEffect, useState } from "react";
+import { Container, Row, Col, Pagination, InputGroup, Form } from "react-bootstrap";
 import ServiceCardComponent from "../../components/services/ServiceCardComponent.jsx";
-import {deleteById, getAll} from "../../services/services/FacilityService.js";
+import { removeById, getAll } from "../../services/services/FacilityService.js";
 
 
 import toast from "react-hot-toast";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Service() {
     const [services, setServices] = useState([]);
-    const [page, setPage] = useState(1);
+    const [page, setPage] = useState(0);
     const [totalPages, setTotalPages] = useState(0);
     const [searchTerm, setSearchTerm] = useState("");
     const [type, setType] = useState("ALL");
-
     const limit = 6;
     const navigate = useNavigate();
 
 
 
     const handleDelete = async (id) => {
-        const result = await deleteById(id);
+        const result = await removeById(id);
         if (result) {
             toast.success("Xóa dịch vụ thành công");
             navigate("/services");
             // Refresh the list
             const data = await getAll(page, limit);
-            setServices(data.data);
-            setTotalPages(data.pages);
+            setServices(data.content);
+            setTotalPages(data.totalPages);
         } else toast.error("Xóa dịch vụ thất bại");
     }
 
     useEffect(() => {
         const fetchServices = async () => {
             const data = await getAll(page, limit);
-            setServices(data.data);
-            setTotalPages(data.pages);
+            setServices(data.content);
+            setTotalPages(data.totalPages);
         }
         fetchServices()
     }, [page]);
@@ -43,8 +42,7 @@ export default function Service() {
     const displayServices = services.filter(s => {
         const matchType = type === "ALL" || s.type === type;
         const matchSearch =
-            s.serviceName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            s.type.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            s.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             s.roomStandard?.toLowerCase().includes(searchTerm.toLowerCase());
 
         return matchType && matchSearch;
@@ -90,7 +88,7 @@ export default function Service() {
                             <ServiceCardComponent
                                 id={s.id}
                                 icon={s.type === "VILLA" ? "🏠" : s.type === "HOUSE" ? "🏡" : "🛏️"}
-                                title={s.serviceName}
+                                title={s.name}
                                 description={`${s.usableArea}m² • ${s.maxPeople} người`}
                                 price={new Intl.NumberFormat("vi-VN", {
                                     style: "currency",
@@ -107,7 +105,6 @@ export default function Service() {
                     </Col>
                 )}
             </Row>
-
             {!searchTerm && (
                 <Pagination className="justify-content-center">
                     <Pagination.Prev
@@ -115,7 +112,7 @@ export default function Service() {
                         onClick={() => setPage(p => p - 1)}
                     />
 
-                    {Array.from({length: totalPages}, (_, i) => (
+                    {Array.from({ length: totalPages }, (_, i) => (
                         <Pagination.Item
                             key={i}
                             active={page === i + 1}
@@ -124,7 +121,6 @@ export default function Service() {
                             {i + 1}
                         </Pagination.Item>
                     ))}
-
                     <Pagination.Next
                         disabled={page === totalPages}
                         onClick={() => setPage(p => p + 1)}

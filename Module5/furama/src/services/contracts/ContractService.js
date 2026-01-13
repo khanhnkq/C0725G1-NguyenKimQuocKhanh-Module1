@@ -3,16 +3,10 @@ import axios from "axios";
 const BASE_URL = "http://localhost:3001/contracts";
 
 export const getAll = async (page = 1, limit = 6) => {
-    try {
-        const response = await axios.get(`${BASE_URL}?_page=${page}&_limit=${limit}`);
-        return {
-            data: response.data,
-            pages: Math.ceil(parseInt(response.headers['x-total-count']) / limit)
-        };
-    } catch (error) {
-        console.error("Error fetching contracts:", error);
-        return { data: [], pages: 0 };
-    }
+
+        const response = await axios.get(`${BASE_URL}?_page=${page}&_per_page=${limit}`);
+        return response.data
+
 };
 
 export const findById = async (id) => {

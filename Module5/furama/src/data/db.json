@@ -78,23 +78,6 @@
       ]
     },
     {
-      "id": "6",
-      "type": "ROOM",
-      "image": "src/assets/logo/logo.jpeg",
-      "serviceName": "Deluxe Room Sea View",
-      "usableArea": 50,
-      "rentalCost": 1800000,
-      "maxPeople": 2,
-      "rentType": "day",
-      "freeService": "Free breakfast",
-      "extraServiceIds": [
-        4
-      ],
-      "extraServices": [
-        {}
-      ]
-    },
-    {
       "id": "7",
       "type": "VILLA",
       "image": "src/assets/logo/logo.jpeg",
@@ -404,57 +387,6 @@
       "extraServices": [
         {}
       ]
-    },
-    {
-      "id": "23",
-      "type": "HOUSE",
-      "image": "src/assets/logo/logo.jpeg",
-      "serviceName": "Simple House",
-      "usableArea": 140,
-      "rentalCost": 4000000,
-      "maxPeople": 4,
-      "rentType": "day",
-      "roomStandard": "Standard",
-      "otherAmenities": "Basic amenities",
-      "floors": 1,
-      "extraServiceIds": [
-        3
-      ],
-      "extraServices": [
-        {}
-      ]
-    },
-    {
-      "id": "1f5f",
-      "type": "VILLA",
-      "serviceName": "Add",
-      "usableArea": 2000,
-      "rentalCost": 998,
-      "maxPeople": 8,
-      "rentType": "day",
-      "roomStandard": "Normal",
-      "otherAmenities": "Ocean view, private garden, BBQ area",
-      "poolArea": 200,
-      "floors": 8,
-      "extraServiceIds": [
-        5,
-        4
-      ],
-      "image": "src/assets/logo/logo.jpeg",
-      "extraServices": [
-        {
-          "id": "4",
-          "serviceName": "Drink",
-          "unit": "Bottle",
-          "price": 50000
-        },
-        {
-          "id": "5",
-          "serviceName": "Car Rental",
-          "unit": "Day",
-          "price": 800000
-        }
-      ]
     }
   ],
   "extraServices": [
@@ -490,30 +422,6 @@
     }
   ],
   "customers": [
-    {
-      "id": "1",
-      "customerCode": "KH-001",
-      "customerName": "Nguyễn Văn An",
-      "dateOfBirth": "1990-05-15",
-      "gender": "Nam",
-      "idCard": "123456789",
-      "phoneNumber": "0901234567",
-      "email": "nguyenvanan@gmail.com",
-      "customerType": "Diamond",
-      "address": "123 Lê Lợi, Đà Nẵng"
-    },
-    {
-      "id": "2",
-      "customerCode": "KH-002",
-      "customerName": "Trần Thị Bình",
-      "dateOfBirth": "1985-08-20",
-      "gender": "Nữ",
-      "idCard": "987654321",
-      "phoneNumber": "0912345678",
-      "email": "tranthibinh@gmail.com",
-      "customerType": "Platinum",
-      "address": "456 Trần Phú, Đà Nẵng"
-    },
     {
       "id": "3",
       "customerCode": "KH-003",
@@ -591,7 +499,7 @@
     {
       "id": "1",
       "contractCode": "HD-001",
-      "customerId": "1",
+      "customerId": null,
       "customerName": "Nguyễn Văn An",
       "serviceId": "1",
       "serviceName": "Luxury Beach Villa",
@@ -604,7 +512,7 @@
     {
       "id": "2",
       "contractCode": "HD-002",
-      "customerId": "2",
+      "customerId": null,
       "customerName": "Trần Thị Bình",
       "serviceId": "2",
       "serviceName": "Family House Garden",
@@ -665,6 +573,20 @@
       "deposit": 5000000,
       "totalAmount": 25000000,
       "status": "Đã thanh toán"
+    },
+    {
+      "id": "32b8",
+      "code": "KH-0002",
+      "name": "Phạm Xuân Diệu api",
+      "dob": "1992-08-08",
+      "gender": true,
+      "idCard": "865342123",
+      "phone": "0954333333",
+      "email": "xuandieu92@gmail.com",
+      "address": "K77/22 Thái Phiên, Quảng Trị",
+      "customerType": {
+        "id": 1
+      }
     }
   ]
 }

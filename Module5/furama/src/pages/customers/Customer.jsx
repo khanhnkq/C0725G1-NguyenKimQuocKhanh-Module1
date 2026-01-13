@@ -1,13 +1,13 @@
-import {useEffect, useState} from "react";
-import {Container, Table, Button, Pagination, Form, InputGroup, Badge} from "react-bootstrap";
-import {Link} from "react-router-dom";
-import {getAll, deleteById} from "../../services/customers/CustomerService.js";
+import { useEffect, useState } from "react";
+import { Container, Table, Button, Pagination, Form, InputGroup, Badge } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { getAll, deleteById } from "../../services/customers/CustomerService.js";
 import DeleteCustomerModal from "../../components/customers/DeleteCustomerModal.jsx";
 import toast from "react-hot-toast";
 
 export default function Customer() {
     const [customers, setCustomers] = useState([]);
-    const [page, setPage] = useState(1);
+    const [page, setPage] = useState(0);
     const [totalPages, setTotalPages] = useState(0);
     const [searchTerm, setSearchTerm] = useState("");
     const [filteredCustomers, setFilteredCustomers] = useState([]);
@@ -18,8 +18,8 @@ export default function Customer() {
 
     const fetchCustomers = async () => {
         const data = await getAll(page, limit);
-        setCustomers(data.data);
-        setTotalPages(data.pages);
+        setCustomers(data.content);
+        setTotalPages(data.totalPages);
     };
 
     useEffect(() => {
@@ -29,10 +29,10 @@ export default function Customer() {
 
     useEffect(() => {
         const filtered = customers.filter(customer =>
-            customer.customerName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            customer.customerCode.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            customer.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            customer.code.toLowerCase().includes(searchTerm.toLowerCase()) ||
             customer.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            customer.phoneNumber.includes(searchTerm)
+            customer.phone.includes(searchTerm)
         );
         setFilteredCustomers(filtered);
     }, [searchTerm, customers]);
@@ -81,7 +81,7 @@ export default function Customer() {
             </div>
 
             <div className="mb-4">
-                <InputGroup style={{maxWidth: '500px'}}>
+                <InputGroup style={{ maxWidth: '500px' }}>
                     <InputGroup.Text>🔍</InputGroup.Text>
                     <Form.Control
                         type="text"
@@ -94,57 +94,57 @@ export default function Customer() {
 
             <Table striped bordered hover responsive>
                 <thead className="table-dark">
-                <tr>
-                    <th>STT</th>
-                    <th>Mã KH</th>
-                    <th>Họ tên</th>
-                    <th>Ngày sinh</th>
-                    <th>Giới tính</th>
-                    <th>CMND</th>
-                    <th>Số điện thoại</th>
-                    <th>Email</th>
-                    <th>Loại khách</th>
-                    <th>Thao tác</th>
-                </tr>
+                    <tr>
+                        <th>STT</th>
+                        <th>Mã KH</th>
+                        <th>Họ tên</th>
+                        <th>Ngày sinh</th>
+                        <th>Giới tính</th>
+                        <th>CMND</th>
+                        <th>Số điện thoại</th>
+                        <th>Email</th>
+                        <th>Loại khách</th>
+                        <th>Thao tác</th>
+                    </tr>
                 </thead>
                 <tbody>
-                {displayCustomers.length > 0 ? (
-                    displayCustomers.map((customer, index) => (
-                        <tr key={customer.id}>
-                            <td>{(page - 1) * limit + index + 1}</td>
-                            <td>{customer.customerCode}</td>
-                            <td>{customer.customerName}</td>
-                            <td>{new Date(customer.dateOfBirth).toLocaleDateString('vi-VN')}</td>
-                            <td>{customer.gender}</td>
-                            <td>{customer.idCard}</td>
-                            <td>{customer.phoneNumber}</td>
-                            <td>{customer.email}</td>
-                            <td>{getCustomerTypeBadge(customer.customerType)}</td>
-                            <td>
-                                <div className="d-flex gap-2">
-                                    <Link to={`/customers/edit/${customer.id}`}>
-                                        <Button variant="warning" size="sm">
-                                            ✏️ Sửa
+                    {displayCustomers.length > 0 ? (
+                        displayCustomers.map((customer, index) => (
+                            <tr key={customer.id}>
+                                <td>{index + 1}</td>
+                                <td>{customer.code}</td>
+                                <td>{customer.name}</td>
+                                <td>{new Date(customer.dob).toLocaleDateString('vi-VN')}</td>
+                                <td>{customer.gender ? 'Nam' : 'Nữ'}</td>
+                                <td>{customer.idCard}</td>
+                                <td>{customer.phone}</td>
+                                <td>{customer.email}</td>
+                                <td>{getCustomerTypeBadge(customer.customerType.name)}</td>
+                                <td>
+                                    <div className="d-flex gap-2">
+                                        <Link to={`/customers/edit/${customer.id}`}>
+                                            <Button variant="warning" size="sm">
+                                                ✏️ Sửa
+                                            </Button>
+                                        </Link>
+                                        <Button
+                                            variant="danger"
+                                            size="sm"
+                                            onClick={() => handleDeleteClick(customer)}
+                                        >
+                                            🗑️ Xóa
                                         </Button>
-                                    </Link>
-                                    <Button
-                                        variant="danger"
-                                        size="sm"
-                                        onClick={() => handleDeleteClick(customer)}
-                                    >
-                                        🗑️ Xóa
-                                    </Button>
-                                </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        ))
+                    ) : (
+                        <tr>
+                            <td colSpan="10" className="text-center text-muted">
+                                Không tìm thấy khách hàng nào
                             </td>
                         </tr>
-                    ))
-                ) : (
-                    <tr>
-                        <td colSpan="10" className="text-center text-muted">
-                            Không tìm thấy khách hàng nào
-                        </td>
-                    </tr>
-                )}
+                    )}
                 </tbody>
             </Table>
 
@@ -155,7 +155,7 @@ export default function Customer() {
                         onClick={() => setPage(p => p - 1)}
                     />
 
-                    {Array.from({length: totalPages}, (_, i) => (
+                    {Array.from({ length: totalPages }, (_, i) => (
                         <Pagination.Item
                             key={i}
                             active={page === i + 1}
@@ -164,7 +164,6 @@ export default function Customer() {
                             {i + 1}
                         </Pagination.Item>
                     ))}
-
                     <Pagination.Next
                         disabled={page === totalPages}
                         onClick={() => setPage(p => p + 1)}

@@ -1,14 +1,16 @@
 import axios from "axios";
 
-const URL = "http://localhost:3001"
+const API = "http://localhost:8080/api/v1/services"
+const URL = `http://localhost:3001`
 
-export const getAll = async (page = 1, perPage = 6) => {
-    const response = await axios.get(`${URL}/services?_page=${page}&_per_page=${perPage}`);
+export const getAll = async (page = 0, size = 5) => {
+    const response = await axios.get(`${API}?page=${page}&size=${size}`);
+    console.log(response.data);
     return response.data;
 }
 
 export const removeById = async (id) => {
-    const res = await axios.delete(`${URL}/services/${id}`);
+    const res = await axios.delete(`${API}/${id}`);
     if (res.status === 200) {
         return true;
     }
